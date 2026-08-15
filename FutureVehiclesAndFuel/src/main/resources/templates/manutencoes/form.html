@@ -8,34 +8,34 @@
     <div th:replace="~{fragments :: mensagens}"></div>
     <form th:action="@{/manutencoes}" th:object="${manutencaoFormData}" method="post" class="card p-4">
         <div class="mb-3">
-            <label class="form-label">Veiculo</label>
+            <label class="form-label">Veiculo: </label>
             <select class="form-select" th:field="*{veiculoId}" required>
                 <option value="">Selecione...</option>
                 <option th:each="v : ${veiculos}" th:value="${v.id}" th:text="${v.placa} + ' - ' + ${v.modelo}"></option>
             </select>
         </div>
         <div class="mb-3">
-            <label class="form-label">Tipo de manutencao</label>
+            <label class="form-label">Tipo de manutencao: </label>
             <select class="form-select" th:field="*{tipo}" required>
                 <option value="">Selecione...</option>
                 <option th:each="t : ${tiposManutencao}" th:value="${t}" th:text="${t}"></option>
             </select>
         </div>
         <div class="mb-3">
-            <label class="form-label">Quilometragem no momento da manutencao</label>
+            <label class="form-label">Quilometragem no momento da manutencao: </label>
             <input type="number" class="form-control" th:field="*{quilometragemRealizada}" min="0" required/>
         </div>
         <div class="mb-3">
-            <label class="form-label">Data</label>
-            <input type="date" class="form-control" th:field="*{dataRealizada}" required/>
+            <label class="form-label">Data: </label>
+            <input type="date" class="form-control" required placeholder="AA/AA/AAAA" th:field="*{dataRealizada}" required/>
         </div>
         <div class="row">
             <div class="col-md-6 mb-3">
-                <label class="form-label">Proxima manutencao em (km)</label>
+                <label class="form-label">Proxima manutencao em (km):</label>
                 <input type="number" class="form-control" th:field="*{intervaloProximaKm}"/>
             </div>
             <div class="col-md-6 mb-3">
-                <label class="form-label">Custo (R$)</label>
+                <label class="form-label">Custo (R$):</label>
                 <input type="number" step="0.01" class="form-control" th:field="*{custo}"/>
             </div>
         </div>
