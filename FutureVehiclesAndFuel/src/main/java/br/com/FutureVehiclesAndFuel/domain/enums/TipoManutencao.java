@@ -2,7 +2,10 @@ package br.com.FutureVehiclesAndFuel.domain.enums;
 
 public enum TipoManutencao {
     TROCA_PASTILHA_FREIO,
-    REVISAO_FREIO,
+    TROCA_OLEO_MOTOR,
+    TROCA_OLEO_CAMBIO,
+    REVISAO_BATERIA,
+    REVISAO_FRENAGEM,
     TROCA_FLUIDO_ARREFECIMENTO,
     REVISAO_SUSPENSAO,
     INSPECAO_CABOS_ALTA_TENSAO,
