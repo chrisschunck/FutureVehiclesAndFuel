@@ -6,6 +6,7 @@ import jakarta.validation.constraints.NotNull;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
+@Schema(description = "Dados de autenteicação de manutenção")
 public record ManutencaoRequestDTO(
         @NotNull Long veiculoId,
         @NotNull TipoManutencao tipo,
