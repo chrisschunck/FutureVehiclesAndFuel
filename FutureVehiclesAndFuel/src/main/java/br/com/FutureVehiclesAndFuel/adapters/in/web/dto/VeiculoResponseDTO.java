@@ -7,6 +7,7 @@ import br.com.FutureVehiclesAndFuel.domain.model.VeiculoBEV;
 import br.com.FutureVehiclesAndFuel.domain.model.VeiculoFCEV;
 import br.com.FutureVehiclesAndFuel.domain.model.VeiculoHibrido;
 
+@Schema(description = "Dados de retorno de autenticação do veículo")
 public record VeiculoResponseDTO(
         Long id,
         String placa,
