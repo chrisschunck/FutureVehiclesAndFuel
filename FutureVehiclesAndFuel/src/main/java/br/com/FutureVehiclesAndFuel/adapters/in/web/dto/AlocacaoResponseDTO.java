@@ -4,6 +4,7 @@ import br.com.FutureVehiclesAndFuel.domain.model.Alocacao;
 
 import java.time.LocalDateTime;
 
+@Schema(description = "Retorno dos dados de autenticação com sucesso")
 public record AlocacaoResponseDTO(
         Long id, Long veiculoId, Long motoristaId, LocalDateTime dataInicio,
         LocalDateTime dataFim, Integer kmInicial, Integer kmFinal, boolean ativa
