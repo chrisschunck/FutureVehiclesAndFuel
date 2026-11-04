@@ -4,6 +4,7 @@ import br.com.FutureVehiclesAndFuel.domain.model.Motorista;
 
 import java.time.LocalDate;
 
+@Schema(description = "Dados de retorno da autenteicação do motorista")
 public record MotoristaResponseDTO(
         Long id, String nome, String cnh, LocalDate validadeCnh, Long empresaId, boolean cnhValida
 ) {
