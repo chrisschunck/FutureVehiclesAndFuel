@@ -5,6 +5,7 @@ import br.com.FutureVehiclesAndFuel.domain.model.Abastecimento;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
+@Schema(description = "Retorno da autenticação com sucesso")
 public record AbastecimentoResponseDTO(
         Long id, Long veiculoId, LocalDateTime dataHora, Double quantidade,
         BigDecimal custo, String localEletroposto
