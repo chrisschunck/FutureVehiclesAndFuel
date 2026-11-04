@@ -5,6 +5,7 @@ import jakarta.validation.constraints.NotNull;
 
 import java.time.LocalDate;
 
+@Schema(description = "Dados de autenticação do motorista")
 public record MotoristaRequestDTO(
         @NotBlank String nome,
         @NotBlank String cnh,
