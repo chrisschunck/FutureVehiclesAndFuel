@@ -4,6 +4,7 @@ import br.com.FutureVehiclesAndFuel.domain.enums.TipoPropulsao;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 
+@Schema(description = "Dados de validação do veiculo")
 public record VeiculoRequestDTO(
         @NotBlank String placa,
         @NotBlank String modelo,
