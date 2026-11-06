@@ -21,7 +21,7 @@ Maven
 
 # ▶️ Execution
 deploy no railway
-Aplicação disponível em: frotacontrol.up.railway.app
+Aplicação fora do ar no momento no Railway: frotacontrol.up.railway.app
 
 # 🗄️ Database
 O sistema utiliza PostgreSQL para persistência dos dados.
