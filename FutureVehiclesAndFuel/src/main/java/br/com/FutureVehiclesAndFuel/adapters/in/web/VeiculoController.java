@@ -25,6 +25,14 @@ public class VeiculoController {
         this.consultarVeiculosUseCase = consultarVeiculosUseCase;
     }
 
+    @ApiResponses(value = {
+        @ApiResponse(responseCode="200", description="Evento com sucesso", name="Response sucesso, "ok"")
+        @ApiResponse(responseCode="201", description="Evento válidado", name="Response validado")
+        @ApiResponse(responseCode="400", description="Response com data invalidada", name="Requisição ruim")
+        @ApiResponse(responseCode="401", description="Evento inválido ou token inacessivel", name="Response não autorizado")
+        @ApiResponse(responseCode="404", description="Evento não encontrado", name="Response não encontrato")
+        @ApiResponse(responseCode="500", description="Evento sem servidor no ar", name="Response com erro no servidor")
+    })
     @PostMapping
     public ResponseEntity<VeiculoResponseDTO> cadastrar(@Valid @RequestBody VeiculoRequestDTO dto) {
         CadastrarVeiculoCommand command = new CadastrarVeiculoCommand(
@@ -36,6 +44,14 @@ public class VeiculoController {
         return ResponseEntity.status(HttpStatus.CREATED).body(VeiculoResponseDTO.fromDomain(veiculo));
     }
 
+    @ApiResponses(value = {
+        @ApiResponse(responseCode="200", description="Evento com sucesso", name="Response sucesso, "ok"")
+        @ApiResponse(responseCode="201", description="Evento válidado", name="Response validado")
+        @ApiResponse(responseCode="400", description="Response com data invalidada", name="Requisição ruim")
+        @ApiResponse(responseCode="401", description="Evento inválido ou token inacessivel", name="Response não autorizado")
+        @ApiResponse(responseCode="404", description="Evento não encontrado", name="Response não encontrato")
+        @ApiResponse(responseCode="500", description="Evento sem servidor no ar", name="Response com erro no servidor")
+    })
     @GetMapping
     public ResponseEntity<List<VeiculoResponseDTO>> listar() {
         var veiculos = consultarVeiculosUseCase.listarTodos().stream()
@@ -43,6 +59,14 @@ public class VeiculoController {
         return ResponseEntity.ok(veiculos);
     }
 
+    @ApiResponses(value = {
+        @ApiResponse(responseCode="200", description="Evento com sucesso", name="Response sucesso, "ok"")
+        @ApiResponse(responseCode="201", description="Evento válidado", name="Response validado")
+        @ApiResponse(responseCode="400", description="Response com data invalidada", name="Requisição ruim")
+        @ApiResponse(responseCode="401", description="Evento inválido ou token inacessivel", name="Response não autorizado")
+        @ApiResponse(responseCode="404", description="Evento não encontrado", name="Response não encontrato")
+        @ApiResponse(responseCode="500", description="Evento sem servidor no ar", name="Response com erro no servidor")
+    })
     @GetMapping("/{id}")
     public ResponseEntity<VeiculoResponseDTO> buscarPorId(@PathVariable Long id) {
         var veiculo = consultarVeiculosUseCase.buscarPorId(id);
