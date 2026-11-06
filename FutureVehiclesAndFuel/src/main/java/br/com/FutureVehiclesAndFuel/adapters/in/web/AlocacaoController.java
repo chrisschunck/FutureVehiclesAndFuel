@@ -3,6 +3,8 @@ package br.com.FutureVehiclesAndFuel.adapters.in.web;
 import br.com.FutureVehiclesAndFuel.adapters.in.web.dto.AlocacaoRequestDTO;
 import br.com.FutureVehiclesAndFuel.adapters.in.web.dto.AlocacaoResponseDTO;
 import br.com.FutureVehiclesAndFuel.adapters.in.web.dto.FinalizarAlocacaoRequestDTO;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import br.com.FutureVehiclesAndFuel.application.port.in.AlocarVeiculoUseCase;
 import br.com.FutureVehiclesAndFuel.application.port.in.FinalizarAlocacaoUseCase;
 import br.com.FutureVehiclesAndFuel.application.port.in.command.AlocarVeiculoCommand;
