@@ -4,6 +4,8 @@ import br.com.FutureVehiclesAndFuel.adapters.in.web.dto.AbastecimentoRequestDTO;
 import br.com.FutureVehiclesAndFuel.adapters.in.web.dto.AbastecimentoResponseDTO;
 import br.com.FutureVehiclesAndFuel.application.port.in.RegistrarAbastecimentoUseCase;
 import br.com.FutureVehiclesAndFuel.application.port.in.command.RegistrarAbastecimentoCommand;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
