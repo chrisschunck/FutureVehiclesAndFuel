@@ -4,6 +4,8 @@ import br.com.FutureVehiclesAndFuel.adapters.in.web.dto.VeiculoRequestDTO;
 import br.com.FutureVehiclesAndFuel.adapters.in.web.dto.VeiculoResponseDTO;
 import br.com.FutureVehiclesAndFuel.application.port.in.CadastrarVeiculoUseCase;
 import br.com.FutureVehiclesAndFuel.application.port.in.ConsultarVeiculosUseCase;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import br.com.FutureVehiclesAndFuel.application.port.in.command.CadastrarVeiculoCommand;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
