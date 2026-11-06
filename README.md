@@ -4,7 +4,7 @@ Projeto desenvolvido com o objetivo de aplicar conceitos de Arquitetura Hexagona
 # 📌 Objective
 Gerenciar a frota de veículos elétricos (e de combustíveis futuros) de uma empresa através de uma API REST e de uma interface web.
 A aplicação permite:
-Cadastrar veículos com diferentes fontes de energia (BEV, FCEV, Híbrido) Cadastrar motoristas Alocar veículos a motoristas Finalizar alocações Registrar manutenções preventivas Registrar abastecimentos e recargas Consultar o status da frota em tempo real Interagir pela API REST ou pela interface web
+Cadastrar veículos com diferentes fontes de energia (BEV, FCEV, Híbrido) Cadastrar motoristas Alocar veículos a motoristas Finalizar alocações Registrar manutenções preventivas Registrar abastecimentos e recargas Consultar o status da frota em tempo real Interagir pela API REST com tratamento com ApiResponses e ou pela interface web
 
 # ⚙️ Technologies
 Java 21+
@@ -22,6 +22,7 @@ Maven
 # ▶️ Execution
 deploy no railway
 Aplicação disponível em: frotacontrol.up.railway.app
+
 # 🗄️ Database
 O sistema utiliza PostgreSQL para persistência dos dados.
 O banco é inicializado automaticamente pelo Spring Boot.
