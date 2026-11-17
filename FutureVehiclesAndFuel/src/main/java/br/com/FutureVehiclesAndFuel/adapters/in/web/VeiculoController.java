@@ -58,7 +58,7 @@ public class VeiculoController {
     public ResponseEntity<List<VeiculoResponseDTO>> listar() {
         var veiculos = consultarVeiculosUseCase.listarTodos().stream()
                 .map(VeiculoResponseDTO::fromDomain).toList();
-        return ResponseEntity.ok(veiculos), HttpStatus.ok();
+        return ResponseEntity.ok((veiculos), HttpStatus.OK);
     }
 
     @ApiResponses(value = {
@@ -72,6 +72,6 @@ public class VeiculoController {
     @GetMapping("/{id}")
     public ResponseEntity<VeiculoResponseDTO> buscarPorId(@PathVariable Long id) {
         var veiculo = consultarVeiculosUseCase.buscarPorId(id);
-        return ResponseEntity.ok(VeiculoResponseDTO.fromDomain(veiculo), HttpStatus.ok());
+        return ResponseEntity.ok(VeiculoResponseDTO.fromDomain(veiculo), HttpStatus.OK);
     }
 }
