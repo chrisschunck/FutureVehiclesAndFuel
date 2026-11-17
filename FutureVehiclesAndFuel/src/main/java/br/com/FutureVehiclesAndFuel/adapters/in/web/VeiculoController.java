@@ -58,7 +58,7 @@ public class VeiculoController {
     public ResponseEntity<List<VeiculoResponseDTO>> listar() {
         var veiculos = consultarVeiculosUseCase.listarTodos().stream()
                 .map(VeiculoResponseDTO::fromDomain).toList();
-        return ResponseEntity.ok(veiculos);
+        return ResponseEntity.ok(veiculos), HttpStatus.ok();
     }
 
     @ApiResponses(value = {
