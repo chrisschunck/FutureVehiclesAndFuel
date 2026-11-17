@@ -53,6 +53,6 @@ public class AlocacaoController {
     public ResponseEntity<AlocacaoResponseDTO> finalizar(@PathVariable Long id,
                                                           @RequestBody FinalizarAlocacaoRequestDTO dto) {
         var alocacao = finalizarAlocacaoUseCase.finalizar(id, dto.kmFinal());
-        return ResponseEntity.ok(AlocacaoResponseDTO.fromDomain(alocacao));
+        return ResponseEntity.ok(AlocacaoResponseDTO.fromDomain(alocacao), HttpStatus.ok());
     }
 }
