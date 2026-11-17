@@ -25,12 +25,14 @@ public class ManutencaoController {
     }
 
     @ApiResponses(value = {
-        @ApiResponse(responseCode="200", description="Evento com sucesso", name="Response sucesso, "ok"")
-        @ApiResponse(responseCode="201", description="Evento válidado", name="Response validado")
-        @ApiResponse(responseCode="400", description="Response com data invalidada", name="Requisição ruim")
-        @ApiResponse(responseCode="401", description="Evento inválido ou token inacessivel", name="Response não autorizado")
-        @ApiResponse(responseCode="404", description="Evento não encontrado", name="Response não encontrato")
-        @ApiResponse(responseCode="500", description="Evento sem servidor no ar", name="Response com erro no servidor")
+        @ApiResponse(responseCode="200", description="OK")
+        @ApiResponse(responseCode="201", description="CREATED")
+        @ApiResponse(responseCode="204", description="NO CONTENT")
+        @ApiResponse(responseCode="400", description="BAD REQUEST")
+        @ApiResponse(responseCode="401", description="Unauthorized")
+        @ApiResponse(responseCode="403", description="Forbidden")
+        @ApiResponse(responseCode="404", description="Not Found")
+        @ApiResponse(responseCode="500", description="Internal Error")
     })
     @PostMapping
     public ResponseEntity<ManutencaoResponseDTO> registrar(@Valid @RequestBody ManutencaoRequestDTO dto) {
