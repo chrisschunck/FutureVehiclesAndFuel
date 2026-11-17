@@ -72,6 +72,6 @@ public class VeiculoController {
     @GetMapping("/{id}")
     public ResponseEntity<VeiculoResponseDTO> buscarPorId(@PathVariable Long id) {
         var veiculo = consultarVeiculosUseCase.buscarPorId(id);
-        return ResponseEntity.ok(VeiculoResponseDTO.fromDomain(veiculo));
+        return ResponseEntity.ok(VeiculoResponseDTO.fromDomain(veiculo), HttpStatus.ok());
     }
 }
